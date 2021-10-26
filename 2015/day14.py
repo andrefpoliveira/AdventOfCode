@@ -1,6 +1,3 @@
-import re
-import json
-
 def part1 (d):
     max_distance = 0
 
