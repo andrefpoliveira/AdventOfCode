@@ -80,5 +80,5 @@ if __name__ == "__main__":
         (80, 0, 3),
     ]
 
-    print(f"Day 20 Part 1: {part1(boss_hit, boss_dmg, boss_armor, weapons, armor, rings)}")
-    print(f"Day 20 Part 2: {part2()}")
+    print(f"Day 21 Part 1: {part1(boss_hit, boss_dmg, boss_armor, weapons, armor, rings)}")
+    print(f"Day 21 Part 2: {part2()}")
