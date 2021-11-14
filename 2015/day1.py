@@ -9,7 +9,7 @@ def part2(input_text):
     return -1
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day1.txt", "r") as f:
         input_text = f.read()
 
     print(f"Day 1 Part 1: {part1(input_text)}")

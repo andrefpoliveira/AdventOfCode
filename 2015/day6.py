@@ -26,7 +26,7 @@ def solve(input_text):
     return sum([x.count(1) for x in grid1]), sum([sum(x) for x in grid2])
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day6.txt", "r") as f:
         input_text = f.readlines()
 
     part1, part2 = solve(input_text)

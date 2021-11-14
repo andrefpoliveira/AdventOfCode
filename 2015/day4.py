@@ -9,7 +9,7 @@ def solve(input_text, number_of_zeros, starting_value=1):
         n += 1
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day4.txt", "r") as f:
         input_text = f.read()
 
     part1 = solve(input_text, 5)

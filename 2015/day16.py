@@ -26,7 +26,7 @@ def part2(sues, info):
     return matches.index(max(matches))+1
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day16.txt", "r") as f:
         sues = []
         for line in f.readlines():
             splitted = line.strip().split(" ")

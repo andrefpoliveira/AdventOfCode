@@ -11,7 +11,7 @@ def solve(grid, locs, fc, starting_value):
     return best_path
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day9.txt", "r") as f:
         input_text = f.readlines()
 
     grid = {}

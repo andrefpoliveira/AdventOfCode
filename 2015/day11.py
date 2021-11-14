@@ -44,7 +44,7 @@ def solve(pwd):
         
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day11.txt", "r") as f:
         input_text = f.read().strip()
 
     part1 = solve(input_text)

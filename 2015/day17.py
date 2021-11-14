@@ -16,7 +16,7 @@ def part2(containers):
     return -1
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day17.txt", "r") as f:
         containers = [int(x.strip()) for x in f.readlines()]
 
     print(f"Day 17 Part 1: {part1(containers)}")

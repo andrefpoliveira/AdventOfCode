@@ -19,7 +19,7 @@ def part2(number):
             return i+1
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day20.txt", "r") as f:
         number = int(f.read().strip())
 
     print(f"Day 20 Part 1: {part1(number)}")

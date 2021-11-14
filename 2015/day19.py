@@ -25,7 +25,7 @@ def part2(reactions, mol):
 if __name__ == "__main__":
     reactions = []
 
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day19.txt", "r") as f:
         lines = f.readlines()
         for line in lines[:-2]:
             spl = line.strip().split(" => ")

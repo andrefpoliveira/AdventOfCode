@@ -1,4 +1,3 @@
-from itertools import combinations
 import numpy
 
 def get_spoon_combs(l):
@@ -38,7 +37,7 @@ def solve(d):
     return part1, part2
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day15.txt", "r") as f:
         d = {}
         for line in f.readlines():
             splitted = line.strip().split(" ")

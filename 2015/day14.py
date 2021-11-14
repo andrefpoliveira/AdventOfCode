@@ -46,7 +46,7 @@ def part2 (d):
     return max(points)
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day14.txt", "r") as f:
         d = {}
         for line in f.readlines():
             splitted = line.strip().split(" ")

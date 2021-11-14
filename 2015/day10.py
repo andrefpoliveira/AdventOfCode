@@ -18,7 +18,7 @@ def solve(number, reps):
     return len(number)
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day10.txt", "r") as f:
         input_text = f.read().strip()
 
     print(f"Day 10 Part 1: {solve(input_text, 40)}")

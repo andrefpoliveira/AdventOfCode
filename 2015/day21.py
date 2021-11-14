@@ -49,7 +49,7 @@ def part2(boss_hit, boss_dmg, boss_armor, weapons, armor, rings):
     return max_cost 
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day21.txt", "r") as f:
         lines = f.readlines()
         boss_hit = int(lines[0].strip().split(" ")[-1])
         boss_dmg = int(lines[1].strip().split(" ")[-1])

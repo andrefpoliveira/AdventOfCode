@@ -34,7 +34,7 @@ def solve(input_text, initial_d = {}):
     return d['a']
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day7.txt", "r") as f:
         input_text = f.readlines()
 
     res = solve(input_text)

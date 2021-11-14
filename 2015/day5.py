@@ -20,7 +20,7 @@ def part2(input_text):
     return total
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("./2015/inputs/day5.txt", "r") as f:
         input_text = f.readlines()
 
     print(f"Day 5 Part 1: {part1(input_text)}")
