@@ -25,7 +25,7 @@ def part2(sues, info):
         matches.append(match)
     return matches.index(max(matches))+1
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day16.txt", "r") as f:
         sues = []
         for line in f.readlines():
@@ -49,3 +49,6 @@ if __name__ == "__main__":
 
     print(f"Day 16 Part 1: {part1(sues, info)}")
     print(f"Day 16 Part 2: {part2(sues, info)}")
+
+if __name__ == "__main__":
+    run()

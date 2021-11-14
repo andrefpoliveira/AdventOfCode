@@ -8,9 +8,12 @@ def part2(input_text):
         if floor == -1: return i+1
     return -1
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day1.txt", "r") as f:
         input_text = f.read()
 
     print(f"Day 1 Part 1: {part1(input_text)}")
     print(f"Day 1 Part 2: {part2(input_text)}")
+
+if __name__ == "__main__":
+    run()

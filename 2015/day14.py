@@ -45,7 +45,7 @@ def part2 (d):
 
     return max(points)
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day14.txt", "r") as f:
         d = {}
         for line in f.readlines():
@@ -56,3 +56,6 @@ if __name__ == "__main__":
 
     print(f"Day 14 Part 1: {part1(d)}")
     print(f"Day 14 Part 2: {part2(d)}")
+
+if __name__ == "__main__":
+    run()

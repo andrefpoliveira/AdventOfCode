@@ -36,7 +36,7 @@ def solve(d):
 
     return part1, part2
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day15.txt", "r") as f:
         d = {}
         for line in f.readlines():
@@ -48,3 +48,6 @@ if __name__ == "__main__":
     part1, part2 = solve(d)
     print(f"Day 15 Part 1: {part1}")
     print(f"Day 15 Part 2: {part2}")
+
+if __name__ == "__main__":
+    run()

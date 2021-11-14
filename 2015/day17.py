@@ -15,9 +15,12 @@ def part2(containers):
         if total > 0: return total
     return -1
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day17.txt", "r") as f:
         containers = [int(x.strip()) for x in f.readlines()]
 
     print(f"Day 17 Part 1: {part1(containers)}")
     print(f"Day 17 Part 2: {part2(containers)}")
+
+if __name__ == "__main__":
+    run()

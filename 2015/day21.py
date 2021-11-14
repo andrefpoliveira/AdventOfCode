@@ -48,7 +48,7 @@ def part2(boss_hit, boss_dmg, boss_armor, weapons, armor, rings):
                     max_cost = cost
     return max_cost 
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day21.txt", "r") as f:
         lines = f.readlines()
         boss_hit = int(lines[0].strip().split(" ")[-1])
@@ -82,3 +82,6 @@ if __name__ == "__main__":
 
     print(f"Day 21 Part 1: {part1(boss_hit, boss_dmg, boss_armor, weapons, armor, rings)}")
     print(f"Day 21 Part 2: {part2(boss_hit, boss_dmg, boss_armor, weapons, armor, rings)}")
+
+if __name__ == "__main__":
+    run()

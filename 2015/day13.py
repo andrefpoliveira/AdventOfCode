@@ -14,7 +14,7 @@ def solve(d, list_people):
             max_hap = current_hap
     return max_hap
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day13.txt", "r") as f:
         d = {}
         list_people = set()
@@ -34,3 +34,6 @@ if __name__ == "__main__":
     print(f"Day 13 Part 1: {solve(d, list_people)}")
     list_people.add("me")
     print(f"Day 13 Part 2: {solve(d, list_people)}")
+
+if __name__ == "__main__":
+    run()

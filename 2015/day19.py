@@ -21,8 +21,7 @@ def part2(reactions, mol):
                 count += 1
     return count
 
-
-if __name__ == "__main__":
+def run():
     reactions = []
 
     with open("./2015/inputs/day19.txt", "r") as f:
@@ -37,3 +36,6 @@ if __name__ == "__main__":
 
     print(f"Day 19 Part 1: {part1(reactions, mol)}")
     print(f"Day 19 Part 2: {part2(reactions, mol)}")
+
+if __name__ == "__main__":
+    run()

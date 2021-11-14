@@ -27,9 +27,12 @@ def part2(input_text):
 
     return len(visited)
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day3.txt", "r") as f:
         input_text = f.read()
 
     print(f"Day 3 Part 1: {part1(input_text)}")
     print(f"Day 3 Part 2: {part2(input_text)}")
+
+if __name__ == "__main__":
+    run()

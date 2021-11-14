@@ -10,7 +10,7 @@ def solve(grid, locs, fc, starting_value):
         best_path = fc(best_path, current_path)
     return best_path
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day9.txt", "r") as f:
         input_text = f.readlines()
 
@@ -27,3 +27,6 @@ if __name__ == "__main__":
 
     print(f"Day 9 Part 1: {solve(grid, locs, min, float('Inf'))}")
     print(f"Day 9 Part 2: {solve(grid, locs, max, -float('Inf'))}")
+
+if __name__ == "__main__":
+    run()

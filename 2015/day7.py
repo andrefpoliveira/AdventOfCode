@@ -33,10 +33,13 @@ def solve(input_text, initial_d = {}):
                 pass
     return d['a']
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day7.txt", "r") as f:
         input_text = f.readlines()
 
     res = solve(input_text)
     print(f"Day 7 Part 1: {res}")
     print(f"Day 7 Part 2: {solve(input_text, {'b':res})}")
+
+if __name__ == "__main__":
+    run()

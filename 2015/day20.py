@@ -18,9 +18,12 @@ def part2(number):
         if houses[i] >= number:
             return i+1
 
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day20.txt", "r") as f:
         number = int(f.read().strip())
 
     print(f"Day 20 Part 1: {part1(number)}")
     print(f"Day 20 Part 2: {part2(number)}")
+
+if __name__ == "__main__":
+    run()

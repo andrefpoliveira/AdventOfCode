@@ -42,11 +42,13 @@ def solve(pwd):
         if is_valid(pwd_numbers):
             return ''.join(map(chr, pwd_numbers))
         
-
-if __name__ == "__main__":
+def run():
     with open("./2015/inputs/day11.txt", "r") as f:
         input_text = f.read().strip()
 
     part1 = solve(input_text)
     print(f"Day 11 Part 1: {part1}")
     print(f"Day 11 Part 2: {solve(part1)}")
+
+if __name__ == "__main__":
+    run()
