@@ -1,4 +1,4 @@
-import re
+import re, time
 
 def part1(reactions, mol):
     s = set()
@@ -24,7 +24,7 @@ def part2(reactions, mol):
 def run():
     reactions = []
 
-    with open("./2015/inputs/day19.txt", "r") as f:
+    with open("./year2015/inputs/day19.txt", "r") as f:
         lines = f.readlines()
         for line in lines[:-2]:
             spl = line.strip().split(" => ")
@@ -33,9 +33,13 @@ def run():
 
         mol = lines[-1].strip() 
 
-
+    start = time.time()
     print(f"Day 19 Part 1: {part1(reactions, mol)}")
+    middle = time.time()
     print(f"Day 19 Part 2: {part2(reactions, mol)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

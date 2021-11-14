@@ -1,4 +1,5 @@
 from itertools import permutations
+import time
 
 def solve(d, list_people):
     max_hap = 0
@@ -15,7 +16,7 @@ def solve(d, list_people):
     return max_hap
 
 def run():
-    with open("./2015/inputs/day13.txt", "r") as f:
+    with open("./year2015/inputs/day13.txt", "r") as f:
         d = {}
         list_people = set()
         for line in f.readlines():
@@ -31,9 +32,14 @@ def run():
 
             list_people.add(p1)
 
+    start = time.time()
     print(f"Day 13 Part 1: {solve(d, list_people)}")
+    middle = time.time()
     list_people.add("me")
     print(f"Day 13 Part 2: {solve(d, list_people)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

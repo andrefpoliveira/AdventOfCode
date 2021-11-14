@@ -1,3 +1,5 @@
+import time
+
 def part1(number):
     houses = [0 for x in range(number//10)]
     for elf in range(1, number//10):
@@ -19,11 +21,16 @@ def part2(number):
             return i+1
 
 def run():
-    with open("./2015/inputs/day20.txt", "r") as f:
+    with open("./year2015/inputs/day20.txt", "r") as f:
         number = int(f.read().strip())
 
+    start = time.time()
     print(f"Day 20 Part 1: {part1(number)}")
+    middle = time.time()
     print(f"Day 20 Part 2: {part2(number)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

@@ -1,3 +1,5 @@
+import time
+
 def part1 (d):
     max_distance = 0
 
@@ -46,7 +48,7 @@ def part2 (d):
     return max(points)
 
 def run():
-    with open("./2015/inputs/day14.txt", "r") as f:
+    with open("./year2015/inputs/day14.txt", "r") as f:
         d = {}
         for line in f.readlines():
             splitted = line.strip().split(" ")
@@ -54,8 +56,13 @@ def run():
         
             d[r] = [s, t1, rest]
 
+    start = time.time()
     print(f"Day 14 Part 1: {part1(d)}")
+    middle = time.time()
     print(f"Day 14 Part 2: {part2(d)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

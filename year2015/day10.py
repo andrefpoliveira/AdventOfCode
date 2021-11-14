@@ -1,4 +1,5 @@
 from itertools import permutations
+import time
 
 def solve(number, reps):
     for i in range(reps):
@@ -18,11 +19,16 @@ def solve(number, reps):
     return len(number)
 
 def run():
-    with open("./2015/inputs/day10.txt", "r") as f:
+    with open("./year2015/inputs/day10.txt", "r") as f:
         input_text = f.read().strip()
 
+    start = time.time()
     print(f"Day 10 Part 1: {solve(input_text, 40)}")
+    middle = time.time()
     print(f"Day 10 Part 2: {solve(input_text, 50)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

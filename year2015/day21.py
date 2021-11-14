@@ -1,4 +1,5 @@
 from itertools import combinations
+import time
 
 def part1(boss_hit, boss_dmg, boss_armor, weapons, armor, rings):
     min_cost = float("Inf")
@@ -49,7 +50,7 @@ def part2(boss_hit, boss_dmg, boss_armor, weapons, armor, rings):
     return max_cost 
 
 def run():
-    with open("./2015/inputs/day21.txt", "r") as f:
+    with open("./year2015/inputs/day21.txt", "r") as f:
         lines = f.readlines()
         boss_hit = int(lines[0].strip().split(" ")[-1])
         boss_dmg = int(lines[1].strip().split(" ")[-1])
@@ -80,8 +81,13 @@ def run():
         (80, 0, 3),
     ]
 
+    start = time.time()
     print(f"Day 21 Part 1: {part1(boss_hit, boss_dmg, boss_armor, weapons, armor, rings)}")
+    middle = time.time()
     print(f"Day 21 Part 2: {part2(boss_hit, boss_dmg, boss_armor, weapons, armor, rings)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

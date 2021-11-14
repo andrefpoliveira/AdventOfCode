@@ -1,4 +1,4 @@
-import numpy
+import numpy, time
 
 def get_spoon_combs(l):
     spoons = [0 for _ in range(l)]
@@ -37,7 +37,7 @@ def solve(d):
     return part1, part2
 
 def run():
-    with open("./2015/inputs/day15.txt", "r") as f:
+    with open("./year2015/inputs/day15.txt", "r") as f:
         d = {}
         for line in f.readlines():
             splitted = line.strip().split(" ")
@@ -45,9 +45,13 @@ def run():
         
             d[ingr] = [cap, dur, fla, tex, cal]
 
+    start = time.time()
     part1, part2 = solve(d)
+    end = time.time()
     print(f"Day 15 Part 1: {part1}")
     print(f"Day 15 Part 2: {part2}")
+
+    return ["-", "-", end - start]
 
 if __name__ == "__main__":
     run()

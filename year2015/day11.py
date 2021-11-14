@@ -1,4 +1,4 @@
-import re
+import time
 
 def increase(pwd_numbers):
     min_n = ord('a')
@@ -43,12 +43,17 @@ def solve(pwd):
             return ''.join(map(chr, pwd_numbers))
         
 def run():
-    with open("./2015/inputs/day11.txt", "r") as f:
+    with open("./year2015/inputs/day11.txt", "r") as f:
         input_text = f.read().strip()
 
+    start = time.time()
     part1 = solve(input_text)
+    middle = time.time()
     print(f"Day 11 Part 1: {part1}")
     print(f"Day 11 Part 2: {solve(part1)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

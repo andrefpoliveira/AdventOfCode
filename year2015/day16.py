@@ -1,3 +1,5 @@
+import time
+
 def part1(sues, info):
     matches = []
     for sue in sues:
@@ -26,7 +28,7 @@ def part2(sues, info):
     return matches.index(max(matches))+1
 
 def run():
-    with open("./2015/inputs/day16.txt", "r") as f:
+    with open("./year2015/inputs/day16.txt", "r") as f:
         sues = []
         for line in f.readlines():
             splitted = line.strip().split(" ")
@@ -47,8 +49,13 @@ def run():
                 "perfumes": 1
             }
 
+    start = time.time()
     print(f"Day 16 Part 1: {part1(sues, info)}")
+    middle = time.time()
     print(f"Day 16 Part 2: {part2(sues, info)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

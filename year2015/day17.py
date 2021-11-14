@@ -1,4 +1,5 @@
 from itertools import combinations
+import time
 
 def part1(containers):
     total = 0
@@ -16,11 +17,16 @@ def part2(containers):
     return -1
 
 def run():
-    with open("./2015/inputs/day17.txt", "r") as f:
+    with open("./year2015/inputs/day17.txt", "r") as f:
         containers = [int(x.strip()) for x in f.readlines()]
 
+    start = time.time()
     print(f"Day 17 Part 1: {part1(containers)}")
+    middle = time.time()
     print(f"Day 17 Part 2: {part2(containers)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

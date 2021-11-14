@@ -1,4 +1,4 @@
-import hashlib
+import hashlib, time
 
 def solve(input_text, number_of_zeros, starting_value=1):
     n = starting_value
@@ -9,12 +9,17 @@ def solve(input_text, number_of_zeros, starting_value=1):
         n += 1
 
 def run():
-    with open("./2015/inputs/day4.txt", "r") as f:
+    with open("./year2015/inputs/day4.txt", "r") as f:
         input_text = f.read()
 
+    start = time.time()
     part1 = solve(input_text, 5)
+    middle = time.time()
     print(f"Day 4 Part 1: {part1}")
     print(f"Day 4 Part 2: {solve(input_text, 6, part1)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

@@ -1,4 +1,4 @@
-import re
+import re, time
 
 def part1(input_text):
     total = 0
@@ -20,11 +20,16 @@ def part2(input_text):
     return total
 
 def run():
-    with open("./2015/inputs/day5.txt", "r") as f:
+    with open("./year2015/inputs/day5.txt", "r") as f:
         input_text = f.readlines()
 
+    start = time.time()
     print(f"Day 5 Part 1: {part1(input_text)}")
+    middle = time.time()
     print(f"Day 5 Part 2: {part2(input_text)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

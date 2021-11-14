@@ -1,3 +1,5 @@
+import time
+
 def part1(input_text):
     return input_text.count("(") - input_text.count(")")
 
@@ -9,11 +11,16 @@ def part2(input_text):
     return -1
 
 def run():
-    with open("./2015/inputs/day1.txt", "r") as f:
+    with open("./year2015/inputs/day1.txt", "r") as f:
         input_text = f.read()
 
+    start = time.time()
     print(f"Day 1 Part 1: {part1(input_text)}")
+    middle = time.time()
     print(f"Day 1 Part 2: {part2(input_text)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()

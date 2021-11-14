@@ -1,3 +1,5 @@
+import time
+
 def get_neighbours(x, y):
     l = [(1,0), (-1,0), (0,1), (0,-1), (1,1), (-1,-1), (1,-1), (-1,1)]
     res = []
@@ -50,7 +52,7 @@ def part2(map, neighbours):
     return sum([item for sublist in map for item in sublist])
 
 def run():
-    with open("./2015/inputs/day18.txt", "r") as f:
+    with open("./year2015/inputs/day18.txt", "r") as f:
         map = [[1 if x == "#" else 0 for x in l.strip()] for l in f.readlines()]
 
     neighbours = {}
@@ -58,8 +60,9 @@ def run():
         for y in range(100):
             neighbours[(x, y)] = get_neighbours(x, y)
 
-
+    start = time.time()
     print(f"Day 18 Part 1: {part1(map, neighbours)}")
+    middle = time.time()
 
     map[0][0] = 1
     map[0][99] = 1
@@ -67,6 +70,9 @@ def run():
     map[99][99] = 1
 
     print(f"Day 18 Part 2: {part2(map, neighbours)}")
+    end = time.time()
+
+    return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
     run()
