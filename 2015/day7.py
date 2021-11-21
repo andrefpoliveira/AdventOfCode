@@ -36,7 +36,7 @@ def solve(input_text, initial_d = {}):
     return d['a']
 
 def run():
-    with open("./year2015/inputs/day7.txt", "r") as f:
+    with open("./2015/inputs/day7.txt", "r") as f:
         input_text = f.readlines()
 
     start = time.time()

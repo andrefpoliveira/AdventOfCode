@@ -7,7 +7,7 @@ def part2(input_text):
     return sum([len('"' + word.strip().replace('\\', '\\\\').replace('"', '\\"') + '"') - len(word.strip()) for word in input_text])
 
 def run():
-    with open("./year2015/inputs/day8.txt", "r") as f:
+    with open("./2015/inputs/day8.txt", "r") as f:
         input_text = f.readlines()
 
     start = time.time()

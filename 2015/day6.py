@@ -26,7 +26,7 @@ def solve(input_text):
     return sum([x.count(1) for x in grid1]), sum([sum(x) for x in grid2])
 
 def run():
-    with open("./year2015/inputs/day6.txt", "r") as f:
+    with open("./2015/inputs/day6.txt", "r") as f:
         input_text = f.readlines()
 
     start = time.time()

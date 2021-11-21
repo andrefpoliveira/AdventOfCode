@@ -43,7 +43,7 @@ def solve(pwd):
             return ''.join(map(chr, pwd_numbers))
         
 def run():
-    with open("./year2015/inputs/day11.txt", "r") as f:
+    with open("./2015/inputs/day11.txt", "r") as f:
         input_text = f.read().strip()
 
     start = time.time()

@@ -26,7 +26,7 @@ def part2 (input_text):
     return evaluate(eval(input_text))
 
 def run():
-    with open("./year2015/inputs/day12.txt", "r") as f:
+    with open("./2015/inputs/day12.txt", "r") as f:
         input_text = f.read().strip()
 
     start = time.time()

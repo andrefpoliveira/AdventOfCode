@@ -19,7 +19,7 @@ def solve(number, reps):
     return len(number)
 
 def run():
-    with open("./year2015/inputs/day10.txt", "r") as f:
+    with open("./2015/inputs/day10.txt", "r") as f:
         input_text = f.read().strip()
 
     start = time.time()

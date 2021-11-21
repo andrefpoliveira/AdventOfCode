@@ -11,7 +11,7 @@ def part2(input_text):
     return -1
 
 def run():
-    with open("./year2015/inputs/day1.txt", "r") as f:
+    with open("./2015/inputs/day1.txt", "r") as f:
         input_text = f.read()
 
     start = time.time()

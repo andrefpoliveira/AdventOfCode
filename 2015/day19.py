@@ -24,7 +24,7 @@ def part2(reactions, mol):
 def run():
     reactions = []
 
-    with open("./year2015/inputs/day19.txt", "r") as f:
+    with open("./2015/inputs/day19.txt", "r") as f:
         lines = f.readlines()
         for line in lines[:-2]:
             spl = line.strip().split(" => ")

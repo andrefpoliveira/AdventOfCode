@@ -55,7 +55,7 @@ def solve(boss_hp, boss_dmg, active_spells, player_turn, mana_spent, my_hp = 50,
     return min_mana
 
 def run():
-    with open("./year2015/inputs/day22.txt", "r") as f:
+    with open("./2015/inputs/day22.txt", "r") as f:
         lines = f.readlines()
         boss_hit = int(lines[0].strip().split(" ")[-1])
         boss_dmg = int(lines[1].strip().split(" ")[-1])

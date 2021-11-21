@@ -37,7 +37,7 @@ def solve(d):
     return part1, part2
 
 def run():
-    with open("./year2015/inputs/day15.txt", "r") as f:
+    with open("./2015/inputs/day15.txt", "r") as f:
         d = {}
         for line in f.readlines():
             splitted = line.strip().split(" ")

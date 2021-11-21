@@ -16,7 +16,7 @@ def solve(d, list_people):
     return max_hap
 
 def run():
-    with open("./year2015/inputs/day13.txt", "r") as f:
+    with open("./2015/inputs/day13.txt", "r") as f:
         d = {}
         list_people = set()
         for line in f.readlines():

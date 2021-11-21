@@ -9,7 +9,7 @@ def solve(input_text, number_of_zeros, starting_value=1):
         n += 1
 
 def run():
-    with open("./year2015/inputs/day4.txt", "r") as f:
+    with open("./2015/inputs/day4.txt", "r") as f:
         input_text = f.read()
 
     start = time.time()

@@ -21,7 +21,7 @@ def part2(number):
             return i+1
 
 def run():
-    with open("./year2015/inputs/day20.txt", "r") as f:
+    with open("./2015/inputs/day20.txt", "r") as f:
         number = int(f.read().strip())
 
     start = time.time()

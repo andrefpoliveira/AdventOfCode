@@ -17,7 +17,7 @@ def part2(containers):
     return -1
 
 def run():
-    with open("./year2015/inputs/day17.txt", "r") as f:
+    with open("./2015/inputs/day17.txt", "r") as f:
         containers = [int(x.strip()) for x in f.readlines()]
 
     start = time.time()
