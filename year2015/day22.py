@@ -1,67 +1,73 @@
-from itertools import combinations
+import copy
+import time
 
-def part1(boss_hit, boss_dmg, boss_armor, weapons, armor, rings):
-    min_cost = float("Inf")
-    for weapon in weapons:
-        for arm in armor + [(0,0,0)]:
-            for c in list(combinations(rings, 2)) + list(combinations(rings, 1)) + list(combinations(rings, 0)):
+min_mana = float("Inf")
+part2 = False
 
-                items = [weapon, arm]
-                for i in c:
-                    items.append(i)
-                
-                cost = sum([x[0] for x in items])
-                my_dmg = sum([x[1] for x in items])
-                my_armor = sum([x[2] for x in items])
+# Id, Mana Cost, Dmg, Healing, Armor, Mana, Turns
+spells = [
+    [0, 53, 4, 0, 0, 0, 0],
+    [1, 73, 2, 2, 0, 0, 0],
+    [2, 113, 0, 0, 7, 0, 6],
+    [3, 173, 3, 0, 0, 0, 6],
+    [4, 229, 0, 0, 0, 101, 5]
+]
 
-                dmg_dealt = max(1, my_dmg - boss_armor)
-                dmg_rec = max(1, boss_dmg - my_armor)
+def solve(boss_hp, boss_dmg, active_spells, player_turn, mana_spent, my_hp = 50, mana_available = 500):
+    global min_mana, part2
 
-                turns_needed_to_kill = boss_hit // dmg_dealt + (0 if boss_hit % dmg_dealt == 0 else 1)
-                turns_needed_to_die = 100 // dmg_rec + + (0 if 100 % dmg_rec == 0 else 1)
+    my_armor = 0
 
-                if turns_needed_to_die >= turns_needed_to_kill and cost < min_cost:
-                    min_cost = cost
-    return min_cost         
+    if player_turn and part2:
+        my_hp -= 1
+        if my_hp <= 0: return -1
 
-def part2():
-    max_cost = 0
-    for weapon in weapons:
-        for arm in armor + [(0,0,0)]:
-            for c in list(combinations(rings, 2)) + list(combinations(rings, 1)) + list(combinations(rings, 0)):
+    new_active_spells = []
+    for active_spell in active_spells:
+        if active_spell[6] >= 0:
+            boss_hp -= active_spell[2]
+            my_hp += active_spell[3]
+            my_armor += active_spell[4]
+            mana_available += active_spell[5]
 
-                items = [weapon, arm]
-                for i in c:
-                    items.append(i)
-                
-                cost = sum([x[0] for x in items])
-                my_dmg = sum([x[1] for x in items])
-                my_armor = sum([x[2] for x in items])
+        if active_spell[6] > 1:
+            new_active_spells.append([active_spell[0], active_spell[1], active_spell[2], active_spell[3], active_spell[4], active_spell[5], active_spell[6] - 1])
 
-                dmg_dealt = max(1, my_dmg - boss_armor)
-                dmg_rec = max(1, boss_dmg - my_armor)
+    if boss_hp <= 0:
+        min_mana = min(min_mana, mana_spent)
+        return min_mana
 
-                turns_needed_to_kill = boss_hit // dmg_dealt + (0 if boss_hit % dmg_dealt == 0 else 1)
-                turns_needed_to_die = 100 // dmg_rec + + (0 if 100 % dmg_rec == 0 else 1)
+    if mana_spent > min_mana:
+        return -1
 
-                if turns_needed_to_die < turns_needed_to_kill and cost > max_cost:
-                    max_cost = cost
-    return max_cost 
+    if player_turn:
+        ids = [x[0] for x in new_active_spells]
+        for spell in spells:
+            if spell[0] not in ids and spell[1] <= mana_available:
+                copy_active_spells = copy.deepcopy(new_active_spells)
+                copy_active_spells.append(spell)
+                solve(boss_hp, boss_dmg, copy_active_spells, False, mana_spent + spell[1], my_hp, mana_available - spell[1])
+    else:
+        my_hp += my_armor - boss_dmg if my_armor - boss_dmg < 0 else -1
+        if my_hp > 0:
+            solve(boss_hp, boss_dmg, new_active_spells, True, mana_spent, my_hp, mana_available)
+    
+    return min_mana
 
-if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+def run():
+    with open("./year2015/inputs/day22.txt", "r") as f:
         lines = f.readlines()
         boss_hit = int(lines[0].strip().split(" ")[-1])
         boss_dmg = int(lines[1].strip().split(" ")[-1])
 
-    # Mana Cost, Immediate Dmg, Dmg By Turn, Immediate Healing, Armor by Turn, Mana by Turn, Turns
-    spells = [
-        [53, 4, 0, 0, 0, 0, 0],
-        [73, 2, 0, 2, 0, 0, 0],
-        [113, 0, 0, 0, 7, 0, 6],
-        [173, 0, 3, 0, 0, 0, 6],
-        [229, 0, 0, 0, 0, 101, 5]
-    ]
+    start = time.time()
+    print(f"Day 22 Part 1: {solve(boss_hit, boss_dmg, [], True, 0)}")
+    middle = time.time()
+    min_mana, part2 = float("Inf"), True
+    print(f"Day 22 Part 2: {solve(boss_hit, boss_dmg, [], True, 0)}")
+    end = time.time()
 
-    print(f"Day 20 Part 1: {part1(boss_hit, boss_dmg, spells)}")
-    print(f"Day 20 Part 2: {part2()}")
+    return [middle - start, end - middle, end - start]
+
+if __name__ == "__main__":
+    run()

@@ -25,3 +25,4 @@ My solutions for the Advent Of Code
 | 19 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2015/day19.py) | 0.003 | 0.001 | 0.004 |  |
 | 20 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2015/day20.py) | 14.115 | 5.228 | 19.343 | ✔️ |
 | 21 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2015/day21.py) | 0.004 | 0.002 | 0.006 |  |
+| 22 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2015/day22.py) | 16.494 | 10.185 | 26.679 | ✔️ |
