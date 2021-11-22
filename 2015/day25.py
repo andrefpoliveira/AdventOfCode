@@ -29,4 +29,4 @@ def run():
     return ["-", "-", end - start]
 
 if __name__ == "__main__":
-    print(run())
+    run()
