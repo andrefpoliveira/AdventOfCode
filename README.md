@@ -2,6 +2,7 @@
 My solutions for the Advent Of Code
 
 I marked as "Needs Improvement" any problem that took more than 5 seconds (total). This may be not accurate but... 😊
+
 ## 2015
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) | Needs improvement |
 |:---:|:----:|:---------------------:|:---------------------:|:--------------------:|:-----------------:|
@@ -30,3 +31,8 @@ I marked as "Needs Improvement" any problem that took more than 5 seconds (total
 | 23 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2015/day23.py) | 0.004 | 0.003 | 0.007 |  |
 | 24 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2015/day24.py) | 0.085 | 0.021 | 0.106 |  |
 | 25 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2015/day25.py) | - | - | 3.623 |  |
+
+## 2016
+| Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) | Needs improvement |
+|:---:|:----:|:---------------------:|:---------------------:|:--------------------:|:-----------------:|
+| 1 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day1.py) | - | - | 0.010 |  |
