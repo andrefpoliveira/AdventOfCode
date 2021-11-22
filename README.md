@@ -36,3 +36,4 @@ I marked as "Needs Improvement" any problem that took more than 5 seconds (total
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) | Needs improvement |
 |:---:|:----:|:---------------------:|:---------------------:|:--------------------:|:-----------------:|
 | 1 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day1.py) | - | - | 0.010 |  |
+| 2 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day2.py) | 0.002 | 0.001 | 0.003 |  |
