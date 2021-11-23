@@ -26,9 +26,9 @@ def run():
         triangles = [x.strip() for x in f.readlines()]
 
     start = time.time()
-    print(f"Day 2 Part 1: {part1(triangles)}")
+    print(f"Day 3 Part 1: {part1(triangles)}")
     middle = time.time()
-    print(f"Day 2 Part 2: {part2(triangles)}")
+    print(f"Day 3 Part 2: {part2(triangles)}")
     end = time.time()
 
     return [middle - start, end - middle, end - start]
