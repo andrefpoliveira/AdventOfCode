@@ -19,4 +19,4 @@ def run():
     return [middle - start, end - middle, end - start]
 
 if __name__ == "__main__":
-    print(run())
+    run()
