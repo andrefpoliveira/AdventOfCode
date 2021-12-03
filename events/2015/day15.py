@@ -1,4 +1,8 @@
-import numpy, time
+import numpy
+from utils import problem
+
+problem = problem.Problem("2015/15: Science for Hungry People")
+problem.preprocessor = lambda x: {l.split()[0][:-1]: [int(l.split()[2][:-1]), int(l.split()[4][:-1]), int(l.split()[6][:-1]), int(l.split()[8][:-1]), int(l.split()[10])] for l in x.strip().split("\n")}
 
 def get_spoon_combs(l):
     spoons = [0 for _ in range(l)]
@@ -13,6 +17,7 @@ def get_spoon_combs(l):
         if sum(spoons) == 100:
             yield spoons
 
+@problem.solver()
 def solve(d):
     lts = list(d.values())
     part1 = 0
@@ -36,22 +41,5 @@ def solve(d):
 
     return part1, part2
 
-def run():
-    with open("./2015/inputs/day15.txt", "r") as f:
-        d = {}
-        for line in f.readlines():
-            splitted = line.strip().split(" ")
-            ingr, cap, dur, fla, tex, cal = splitted[0][:-1], int(splitted[2][:-1]), int(splitted[4][:-1]), int(splitted[6][:-1]), int(splitted[8][:-1]), int(splitted[10])
-        
-            d[ingr] = [cap, dur, fla, tex, cal]
-
-    start = time.time()
-    part1, part2 = solve(d)
-    end = time.time()
-    print(f"Day 15 Part 1: {part1}")
-    print(f"Day 15 Part 2: {part2}")
-
-    return ["-", "-", end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

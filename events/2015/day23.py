@@ -1,6 +1,10 @@
-import time
+from utils import problem
+from utils import preprocessing as ppr
 
-def solve(lines, a=0):
+problem = problem.Problem("2015/23: Opening the Turing Lock")
+problem.preprocessor = ppr.lsv
+
+def compute(lines, a=0):
     line = 0
     values = {"a": a, "b": 0}
     while line < len(lines):
@@ -34,17 +38,9 @@ def solve(lines, a=0):
 
     return values["b"]
 
-def run():
-    with open("./2015/inputs/day23.txt", "r") as f:
-        lines = [x.strip() for x in f.readlines()]
-
-    start = time.time()
-    print(f"Day 23 Part 1: {solve(lines)}")
-    middle = time.time()
-    print(f"Day 23 Part 2: {solve(lines, 1)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
+@problem.solver()
+def solve(ls):
+    return compute(ls), compute(ls, 1)
 
 if __name__ == "__main__":
-    run()
+    problem.solve()

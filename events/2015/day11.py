@@ -1,4 +1,8 @@
-import time
+from utils import problem
+from utils import preprocessing as ppr
+
+problem = problem.Problem("2015/11: Corporate Policy")
+problem.preprocessor = ppr.I
 
 def increase(pwd_numbers):
     min_n = ord('a')
@@ -34,26 +38,19 @@ def is_valid(pwd_numbers):
     
     return count >= 2
 
-
-def solve(pwd):
+def find_password(pwd):
     pwd_numbers = [ord(x) for x in pwd]
     while True:
         pwd_numbers = increase(pwd_numbers)
         if is_valid(pwd_numbers):
             return ''.join(map(chr, pwd_numbers))
-        
-def run():
-    with open("./2015/inputs/day11.txt", "r") as f:
-        input_text = f.read().strip()
 
-    start = time.time()
-    part1 = solve(input_text)
-    middle = time.time()
-    print(f"Day 11 Part 1: {part1}")
-    print(f"Day 11 Part 2: {solve(part1)}")
-    end = time.time()
+@problem.solver()
+def solve(input_text):
+    p1 = find_password(input_text)
+    p2 = find_password(p1)
 
-    return [middle - start, end - middle, end - start]
+    return p1, p2
 
 if __name__ == "__main__":
-    run()
+    problem.solve()

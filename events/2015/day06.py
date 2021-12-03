@@ -1,5 +1,11 @@
-import re, time
+import re
+from utils import problem
+from utils import preprocessing as ppr
 
+problem = problem.Problem("2015/06: Probably a Fire Hazard")
+problem.preprocessor = ppr.lsv
+
+@problem.solver()
 def solve(input_text):
     grid1 = [[0 for _ in range(1000)] for _ in range(1000)]
     grid2 = [[0 for _ in range(1000)] for _ in range(1000)]
@@ -25,17 +31,5 @@ def solve(input_text):
 
     return sum([x.count(1) for x in grid1]), sum([sum(x) for x in grid2])
 
-def run():
-    with open("./2015/inputs/day6.txt", "r") as f:
-        input_text = f.readlines()
-
-    start = time.time()
-    part1, part2 = solve(input_text)
-    end = time.time()
-    print(f"Day 6 Part 1: {part1}")
-    print(f"Day 6 Part 2: {part2}")
-
-    return ["-", "-", end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

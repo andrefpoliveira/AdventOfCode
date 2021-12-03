@@ -1,5 +1,9 @@
 from itertools import combinations
-import time
+from utils import problem
+from utils import preprocessing as ppr
+
+problem = problem.Problem("2015/21: RPG Simulator 20XX")
+problem.preprocessor = ppr.lsv
 
 def part1(boss_hit, boss_dmg, boss_armor, weapons, armor, rings):
     min_cost = float("Inf")
@@ -49,12 +53,11 @@ def part2(boss_hit, boss_dmg, boss_armor, weapons, armor, rings):
                     max_cost = cost
     return max_cost 
 
-def run():
-    with open("./2015/inputs/day21.txt", "r") as f:
-        lines = f.readlines()
-        boss_hit = int(lines[0].strip().split(" ")[-1])
-        boss_dmg = int(lines[1].strip().split(" ")[-1])
-        boss_armor = int(lines[2].strip().split(" ")[-1])
+@problem.solver()
+def solve(ls):
+    boss_hit = int(ls[0].strip().split(" ")[-1])
+    boss_dmg = int(ls[1].strip().split(" ")[-1])
+    boss_armor = int(ls[2].strip().split(" ")[-1])
 
     weapons = [
         (8, 4, 0),
@@ -81,13 +84,7 @@ def run():
         (80, 0, 3),
     ]
 
-    start = time.time()
-    print(f"Day 21 Part 1: {part1(boss_hit, boss_dmg, boss_armor, weapons, armor, rings)}")
-    middle = time.time()
-    print(f"Day 21 Part 2: {part2(boss_hit, boss_dmg, boss_armor, weapons, armor, rings)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
+    return part1(boss_hit, boss_dmg, boss_armor, weapons, armor, rings), part2(boss_hit, boss_dmg, boss_armor, weapons, armor, rings)
 
 if __name__ == "__main__":
-    run()
+    problem.solve()

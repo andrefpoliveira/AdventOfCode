@@ -1,6 +1,10 @@
-import time
+from utils import problem
 
-def part1 (d):
+problem = problem.Problem("2015/14: Reindeer Olympics")
+problem.preprocessor = lambda x: {line.split()[0]: [int(line.split()[3]), int(line.split()[6]), int(line.split()[-2])] for line in x.strip().split("\n")}
+
+@problem.solver(part=1)
+def part1(d):
     max_distance = 0
 
     for r in d:
@@ -16,7 +20,8 @@ def part1 (d):
 
     return max_distance
 
-def part2 (d):
+@problem.solver(part=2)
+def part2(d):
     distances = []
     for r in d:
         l = []
@@ -47,22 +52,5 @@ def part2 (d):
 
     return max(points)
 
-def run():
-    with open("./2015/inputs/day14.txt", "r") as f:
-        d = {}
-        for line in f.readlines():
-            splitted = line.strip().split(" ")
-            r, s, t1, rest = splitted[0], int(splitted[3]), int(splitted[6]), int(splitted[-2])
-        
-            d[r] = [s, t1, rest]
-
-    start = time.time()
-    print(f"Day 14 Part 1: {part1(d)}")
-    middle = time.time()
-    print(f"Day 14 Part 2: {part2(d)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

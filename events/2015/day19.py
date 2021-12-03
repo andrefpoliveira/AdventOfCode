@@ -1,4 +1,9 @@
-import re, time
+import re
+from utils import problem
+from utils import preprocessing as ppr
+
+problem = problem.Problem("2015/19: Medicine for Rudolph")
+problem.preprocessor = ppr.lsv
 
 def part1(reactions, mol):
     s = set()
@@ -21,25 +26,17 @@ def part2(reactions, mol):
                 count += 1
     return count
 
-def run():
+@problem.solver()
+def solve(ls):
     reactions = []
+    for line in ls[:-2]:
+        spl = line.strip().split(" => ")
+        fr, t = spl[0], spl[1]
+        reactions.append((fr, t))
 
-    with open("./2015/inputs/day19.txt", "r") as f:
-        lines = f.readlines()
-        for line in lines[:-2]:
-            spl = line.strip().split(" => ")
-            fr, t = spl[0], spl[1]
-            reactions.append((fr, t))
+    mol = ls[-1].strip() 
 
-        mol = lines[-1].strip() 
-
-    start = time.time()
-    print(f"Day 19 Part 1: {part1(reactions, mol)}")
-    middle = time.time()
-    print(f"Day 19 Part 2: {part2(reactions, mol)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
+    return part1(reactions, mol), part2(reactions, mol)
 
 if __name__ == "__main__":
-    run()
+    problem.solve()

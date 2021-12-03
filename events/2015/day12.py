@@ -1,5 +1,11 @@
-import re, time
+import re
+from utils import problem
+from utils import preprocessing as ppr
 
+problem = problem.Problem("2015/12: JSAbacusFramework.io")
+problem.preprocessor = ppr.I
+
+@problem.solver(part=1)
 def part1 (input_text):
     return sum([int(x) for x in re.findall(r"-?\d+", input_text)])
 
@@ -22,20 +28,9 @@ def evaluate(data):
 
     return total
 
+@problem.solver(part=2)
 def part2 (input_text):
     return evaluate(eval(input_text))
 
-def run():
-    with open("./2015/inputs/day12.txt", "r") as f:
-        input_text = f.read().strip()
-
-    start = time.time()
-    print(f"Day 12 Part 1: {part1(input_text)}")
-    middle = time.time()
-    print(f"Day 12 Part 2: {part2(input_text)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

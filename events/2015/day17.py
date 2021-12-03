@@ -1,6 +1,11 @@
 from itertools import combinations
-import time
+from utils import problem
+from utils import preprocessing as ppr
 
+problem = problem.Problem("2015/17: No Such Thing as Too Much")
+problem.preprocessor = ppr.lsi
+
+@problem.solver(part=1)
 def part1(containers):
     total = 0
     for L in range(1, len(containers)+1):
@@ -8,6 +13,7 @@ def part1(containers):
             if sum(c) == 150: total += 1
     return total
 
+@problem.solver(part=2)
 def part2(containers):
     for L in range(1, len(containers)+1):
         total = 0
@@ -16,17 +22,5 @@ def part2(containers):
         if total > 0: return total
     return -1
 
-def run():
-    with open("./2015/inputs/day17.txt", "r") as f:
-        containers = [int(x.strip()) for x in f.readlines()]
-
-    start = time.time()
-    print(f"Day 17 Part 1: {part1(containers)}")
-    middle = time.time()
-    print(f"Day 17 Part 2: {part2(containers)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

@@ -1,19 +1,19 @@
-import time
+from utils import problem
+from utils import preprocessing as ppr
+
+problem = problem.Problem("2015/07: Some Assembly Required")
+problem.preprocessor = ppr.lsv
 
 def transform_left(d, left):
-    if left.isdigit():
-        return int(left)
-    else:
-        return d[left]
+    if left.isdigit(): return int(left)
+    return d[left]
 
-def solve(input_text, initial_d = {}):
+def wiring(input_text, initial_d = {}):
     d = initial_d
     part2 = len(initial_d) == 1
     while "a" not in d:
         for line in input_text:
-            line = line.strip()
-            left = line.split(" -> ")[0]
-            right = line.split(" -> ")[1]
+            left, right = line.strip().split(" -> ")
 
             try:
                 if "AND" in left:
@@ -35,18 +35,11 @@ def solve(input_text, initial_d = {}):
                 pass
     return d['a']
 
-def run():
-    with open("./2015/inputs/day7.txt", "r") as f:
-        input_text = f.readlines()
-
-    start = time.time()
-    res = solve(input_text)
-    middle = time.time()
-    print(f"Day 7 Part 1: {res}")
-    print(f"Day 7 Part 2: {solve(input_text, {'b':res})}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
+@problem.solver()
+def solve(input_text):
+    p1 = wiring(input_text)
+    p2 = wiring(input_text, {'b': p1})
+    return p1, p2
 
 if __name__ == "__main__":
-    run()
+    problem.solve()

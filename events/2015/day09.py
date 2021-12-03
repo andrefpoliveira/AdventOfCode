@@ -1,7 +1,11 @@
 from itertools import permutations
-import time
+from utils import problem
+from utils import preprocessing as ppr
 
-def solve(grid, locs, fc, starting_value):
+problem = problem.Problem("2015/09: All in a Single Night")
+problem.preprocessor = ppr.lsv
+
+def delivers(grid, locs, fc, starting_value):
     best_path = starting_value
     for p in permutations(locs, len(locs)):
         current_path = 0
@@ -11,10 +15,8 @@ def solve(grid, locs, fc, starting_value):
         best_path = fc(best_path, current_path)
     return best_path
 
-def run():
-    with open("./2015/inputs/day9.txt", "r") as f:
-        input_text = f.readlines()
-
+@problem.solver()
+def solve(input_text):
     grid = {}
     locs = set()
     for line in input_text:
@@ -26,13 +28,7 @@ def run():
         grid[f"{f}-{t}"] = d
         grid[f"{t}-{f}"] = d
 
-    start = time.time()
-    print(f"Day 9 Part 1: {solve(grid, locs, min, float('Inf'))}")
-    middle = time.time()
-    print(f"Day 9 Part 2: {solve(grid, locs, max, -float('Inf'))}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
+    return delivers(grid, locs, min, float('Inf')), delivers(grid, locs, max, -float('Inf'))
 
 if __name__ == "__main__":
-    run()
+    problem.solve()

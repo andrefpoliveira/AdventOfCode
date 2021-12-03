@@ -1,5 +1,11 @@
-import re, time
+import re
+from utils import problem
+from utils import preprocessing as ppr
 
+problem = problem.Problem("2015/05: Doesn't He Have Intern-Elves For This?")
+problem.preprocessor = ppr.lsv
+
+@problem.solver(part=1)
 def part1(input_text):
     total = 0
     for word in input_text:
@@ -10,6 +16,7 @@ def part1(input_text):
         total += 1
     return total
 
+@problem.solver(part=2)
 def part2(input_text):
     total = 0
     for word in input_text:
@@ -19,17 +26,5 @@ def part2(input_text):
         total += 1
     return total
 
-def run():
-    with open("./2015/inputs/day5.txt", "r") as f:
-        input_text = f.readlines()
-
-    start = time.time()
-    print(f"Day 5 Part 1: {part1(input_text)}")
-    middle = time.time()
-    print(f"Day 5 Part 2: {part2(input_text)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

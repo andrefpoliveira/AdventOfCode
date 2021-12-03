@@ -1,5 +1,9 @@
 import copy
-import time
+from utils import problem
+from utils import preprocessing as ppr
+
+problem = problem.Problem("2015/22: Wizard Simulator 20XX")
+problem.preprocessor = ppr.lsv
 
 min_mana = float("Inf")
 part2 = False
@@ -13,7 +17,7 @@ spells = [
     [4, 229, 0, 0, 0, 101, 5]
 ]
 
-def solve(boss_hp, boss_dmg, active_spells, player_turn, mana_spent, my_hp = 50, mana_available = 500):
+def battle(boss_hp, boss_dmg, active_spells, player_turn, mana_spent, my_hp = 50, mana_available = 500):
     global min_mana, part2
 
     my_armor = 0
@@ -46,28 +50,22 @@ def solve(boss_hp, boss_dmg, active_spells, player_turn, mana_spent, my_hp = 50,
             if spell[0] not in ids and spell[1] <= mana_available:
                 copy_active_spells = copy.deepcopy(new_active_spells)
                 copy_active_spells.append(spell)
-                solve(boss_hp, boss_dmg, copy_active_spells, False, mana_spent + spell[1], my_hp, mana_available - spell[1])
+                battle(boss_hp, boss_dmg, copy_active_spells, False, mana_spent + spell[1], my_hp, mana_available - spell[1])
     else:
         my_hp += my_armor - boss_dmg if my_armor - boss_dmg < 0 else -1
         if my_hp > 0:
-            solve(boss_hp, boss_dmg, new_active_spells, True, mana_spent, my_hp, mana_available)
+            battle(boss_hp, boss_dmg, new_active_spells, True, mana_spent, my_hp, mana_available)
     
     return min_mana
 
-def run():
-    with open("./2015/inputs/day22.txt", "r") as f:
-        lines = f.readlines()
-        boss_hit = int(lines[0].strip().split(" ")[-1])
-        boss_dmg = int(lines[1].strip().split(" ")[-1])
+@problem.solver()
+def solve(ls):
+    boss_hit = int(ls[0].strip().split(" ")[-1])
+    boss_dmg = int(ls[1].strip().split(" ")[-1])
 
-    start = time.time()
-    print(f"Day 22 Part 1: {solve(boss_hit, boss_dmg, [], True, 0)}")
-    middle = time.time()
+    part1 = battle(boss_hit, boss_dmg, [], True, 0)
     min_mana, part2 = float("Inf"), True
-    print(f"Day 22 Part 2: {solve(boss_hit, boss_dmg, [], True, 0)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
+    return part1, battle(boss_hit, boss_dmg, [], True, 0)
 
 if __name__ == "__main__":
-    run()
+    problem.solve()

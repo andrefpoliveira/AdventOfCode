@@ -1,5 +1,10 @@
-import time
+from utils import problem
+from utils import preprocessing as ppr
 
+problem = problem.Problem("2015/03: Perfectly Spherical Houses in a Vacuum")
+problem.preprocessor = ppr.I
+
+@problem.solver(part=1)
 def part1(input_text):
     x,y = 0,0
     visited = set()
@@ -11,6 +16,7 @@ def part1(input_text):
         visited.add((x,y))
     return len(visited)
 
+@problem.solver(part=2)
 def part2(input_text):
     x,y = 0,0
     x2,y2 = 0,0
@@ -29,17 +35,5 @@ def part2(input_text):
 
     return len(visited)
 
-def run():
-    with open("./2015/inputs/day3.txt", "r") as f:
-        input_text = f.read()
-
-    start = time.time()
-    print(f"Day 3 Part 1: {part1(input_text)}")
-    middle = time.time()
-    print(f"Day 3 Part 2: {part2(input_text)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

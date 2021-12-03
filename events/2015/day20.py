@@ -1,5 +1,10 @@
-import time
+from utils import problem
+from utils import preprocessing as ppr
 
+problem = problem.Problem("2015/20: Infinite Elves and Infinite Houses")
+problem.preprocessor = ppr.intI
+
+@problem.solver(part=1)
 def part1(number):
     houses = [0 for x in range(number//10)]
     for elf in range(1, number//10):
@@ -10,6 +15,7 @@ def part1(number):
         if houses[i] >= number:
             return i+1
 
+@problem.solver(part=2)
 def part2(number):
     houses = [0 for x in range(number//10)]
     for elf in range(1, number//10):
@@ -20,17 +26,5 @@ def part2(number):
         if houses[i] >= number:
             return i+1
 
-def run():
-    with open("./2015/inputs/day20.txt", "r") as f:
-        number = int(f.read().strip())
-
-    start = time.time()
-    print(f"Day 20 Part 1: {part1(number)}")
-    middle = time.time()
-    print(f"Day 20 Part 2: {part2(number)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

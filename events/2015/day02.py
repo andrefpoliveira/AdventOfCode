@@ -1,5 +1,11 @@
-import math, time
+import math
+from utils import problem
+from utils import preprocessing as ppr
 
+problem = problem.Problem("2015/02: I Was Told There Would Be No Math")
+problem.preprocessor = ppr.lsv
+
+@problem.solver(part=1)
 def part1(input_text):
     t = 0
     for line in input_text:
@@ -7,6 +13,7 @@ def part1(input_text):
         t += 2*l*w + 2*w*h + 2*h*l + min(l*w, min(w*h, h*l))
     return t
 
+@problem.solver(part=2)
 def part2(input_text):
     t = 0
     for line in input_text:
@@ -18,17 +25,5 @@ def part2(input_text):
         t += 2*m1 + 2*m2 + math.prod(v)*m1
     return t
 
-def run():
-    with open("./2015/inputs/day2.txt", "r") as f:
-        input_text = f.readlines()
-
-    start = time.time()
-    print(f"Day 2 Part 1: {part1(input_text)}")
-    middle = time.time()
-    print(f"Day 2 Part 2: {part2(input_text)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

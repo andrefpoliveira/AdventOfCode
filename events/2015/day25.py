@@ -1,6 +1,12 @@
-import time, re
+import re
+from utils import problem
 
-def solve(row, col):
+problem = problem.Problem("2015/25: Let It Snow")
+problem.preprocessor = lambda x: list(map(int, re.findall(r"\d+", x)))
+
+@problem.solver(part=1)
+def solve(ns):
+    row, col = ns
     value = 31916031
     current_row, current_col = 1, 2
     max_row = 3
@@ -18,15 +24,5 @@ def solve(row, col):
 
     return (value * 252533) % 33554393
 
-def run():
-    with open("./2015/inputs/day25.txt", "r") as f:
-        numbers = list(map(int, re.findall(r"\d+", f.readline())))
-
-    start = time.time()
-    print(f"Day 25 Part 1: {solve(numbers[0], numbers[1])}")
-    end = time.time()
-
-    return ["-", "-", end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

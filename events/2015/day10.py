@@ -1,7 +1,10 @@
-from itertools import permutations
-import time
+from utils import problem
+from utils import preprocessing as ppr
 
-def solve(number, reps):
+problem = problem.Problem("2015/10: Elves Look, Elves Say")
+problem.preprocessor = ppr.I
+
+def look_and_say(number, reps):
     for i in range(reps):
         new_number = ""
         c = number[0]
@@ -18,17 +21,9 @@ def solve(number, reps):
         number = new_number
     return len(number)
 
-def run():
-    with open("./2015/inputs/day10.txt", "r") as f:
-        input_text = f.read().strip()
-
-    start = time.time()
-    print(f"Day 10 Part 1: {solve(input_text, 40)}")
-    middle = time.time()
-    print(f"Day 10 Part 2: {solve(input_text, 50)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
+@problem.solver()
+def solve(input_text):
+    return look_and_say(input_text, 40), look_and_say(input_text, 50)
 
 if __name__ == "__main__":
-    run()
+    problem.solve()
