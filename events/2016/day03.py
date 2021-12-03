@@ -1,5 +1,11 @@
-import time, re
+import re
+from utils import problem
+from utils import preprocessing as ppr
 
+problem = problem.Problem("2016/03: Squares With Three Sides")
+problem.preprocessor = ppr.lsv
+
+@problem.solver(part=1)
 def part1(triangles):
     count = 0
 
@@ -9,6 +15,7 @@ def part1(triangles):
             count += 1
     return count
 
+@problem.solver(part=2)
 def part2(triangles):
     count = 0
     for id in range(2, len(triangles), 3):
@@ -21,17 +28,5 @@ def part2(triangles):
                 count += 1
     return count
 
-def run():
-    with open("./2016/inputs/day3.txt", "r") as f:
-        triangles = [x.strip() for x in f.readlines()]
-
-    start = time.time()
-    print(f"Day 3 Part 1: {part1(triangles)}")
-    middle = time.time()
-    print(f"Day 3 Part 2: {part2(triangles)}")
-    end = time.time()
-
-    return [middle - start, end - middle, end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()

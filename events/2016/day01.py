@@ -1,5 +1,10 @@
-import time
+from utils import problem
+from utils import preprocessing as ppr
 
+problem = problem.Problem("2016/01: No Time for a Taxicab")
+problem.preprocessor = lambda x: x.strip().split(", ")
+
+@problem.solver()
 def solve(directions):
     pos = [(0,0)]
     d, dir = [(0, 1), (1, 0), (0, -1), (-1, 0)], 0
@@ -28,17 +33,5 @@ def solve(directions):
 
     return abs(x) + abs(y), part2
 
-def run():
-    with open("./2016/inputs/day1.txt", "r") as f:
-        directions = f.readline().split(", ")
-
-    start = time.time()
-    part1, part2 = solve(directions)
-    end = time.time()
-    print(f"Day 1 Part 1: {part1}")
-    print(f"Day 1 Part 2: {part2}")
-
-    return ["-", "-", end - start]
-
 if __name__ == "__main__":
-    run()
+    problem.solve()
