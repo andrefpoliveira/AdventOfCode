@@ -44,3 +44,4 @@ I marked as "Needs Improvement" any problem that took more than 5 seconds (total
 |:---:|:----:|:---------------------:|:---------------------:|:--------------------:|:-----------------:|
 | 1 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day01.py) | 0.001 | 0.001 | 0.002 |  |
 | 2 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day02.py) | - | - | 0.004 |  |
+| 3 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day03.py) | 0.007 | 0.005 | 0.012 |  |
