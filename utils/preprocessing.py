@@ -1,5 +1,7 @@
 def I(s):
     return s.strip()
+def intI(s):
+    return int(s.strip())
 
 #
 # Input Parsing - Space/Comma/Line separared values/integers
