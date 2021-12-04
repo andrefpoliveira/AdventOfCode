@@ -52,6 +52,7 @@ class Problem:
 
         # All tests are user-defined.
         self.tests = {}
+        self.total_time = 0
 
     def solver(self, part="both"):
         """ solver()
@@ -94,6 +95,8 @@ class Problem:
             out = fn(inp)
             stop = time.perf_counter()
 
+            self.total_time += (stop - start)
+
             # Compute runtime and appropriate time unit.
             delta, unit = (stop - start), 0
             while delta < 1 and unit <= 3:
@@ -110,3 +113,11 @@ class Problem:
                 print("Part {}: {} (runtime: {}{})".format(
                     part, out, delta, unit
                 ))
+
+        if len(self.fns.items()) > 1:
+            delta, unit = self.total_time, 0
+            while delta < 1 and unit <= 3:
+                delta, unit = 1000 * delta, unit + 1
+            delta, unit = round(delta, 5), ["s", "ms", "us", "ns"][unit]
+
+            print("Total time: {}{}".format(delta, unit))
