@@ -50,3 +50,4 @@ I marked as "Needs Improvement" any problem that took more than 5 seconds (total
 | 2 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day02.py) | - | - | 0.004 |
 | 3 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day03.py) | 0.007 | 0.005 | 0.012 |
 | 4 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day04.py) | - | - | 0.032 |
+| 5 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day05.py) | - | - | 0.185 |
