@@ -1,4 +1,4 @@
-import functools, math
+import math
 
 def _gcd(a, b):
     """Finds the Greatest Common Divisor of two integers a and b"""
@@ -23,6 +23,9 @@ def lcm(ns):
         a, b = ns.pop(), ns.pop()
         ns.append(_lcm(a, b))
     return ns[0]
+
+def triangular_number(n):
+    return (n * (n + 1)) // 2
 
 #####
 

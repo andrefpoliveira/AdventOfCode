@@ -42,7 +42,7 @@ I marked as "Needs Improvement" any problem that took more than 5 seconds (total
 | 5 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day05.py) | 11.093 | 42.456 | 53.549 |
 | 6 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day06.py) | 0.001 | 0.001 | 0.002 |
 | 7 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day07.py) | 0.022 | 0.022 | 0.044 |
-| 8 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day07.py) | 0.003 | - | 0.003 |
+| 8 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day08.py) | 0.003 | - | 0.003 |
 
 ## 2021
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
@@ -53,3 +53,4 @@ I marked as "Needs Improvement" any problem that took more than 5 seconds (total
 | 4 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day04.py) | - | - | 0.032 |
 | 5 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day05.py) | - | - | 0.185 |
 | 6 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day06.py) | - | - | 0.007 |
+| 7 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day07.py) | - | - | 0.270 |
