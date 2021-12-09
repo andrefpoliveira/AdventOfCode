@@ -1,8 +1,8 @@
-def get_neighbours(point, min_v, max_v, dirs):
+def get_neighbours(point, min_v, max_r, max_c, dirs):
     points = []
     for dir in dirs:
         dx, dy = point[0] + dir[0], point[1] + dir[1]
-        if not(dx < min_v or dx >= max_v or dy < min_v or dy >= max_v):
+        if not(dx < min_v or dx >= max_r or dy < min_v or dy >= max_c):
             points.append((dx, dy))
 
     return points

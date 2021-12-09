@@ -28,6 +28,9 @@ def lsi(s):
 def grid(s):
     return [list(l) for l in s.strip().split("\n")]
 
+def int_grid(s):
+    return [[int(i) for i in row] for row in s.strip().split("\n")]
+
 #
 # Character / Digits string
 #
