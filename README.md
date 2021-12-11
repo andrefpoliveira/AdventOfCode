@@ -1,14 +1,15 @@
 # AdventOfCode
+<p align="center">
+    <a href="https://github.com/andrefpoliveira/AdventOfCode#2015" alt="Year2015">
+        <img src="https://img.shields.io/badge/2015-25%2F25-green" /></a>
+    <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016">
+        <img src="https://img.shields.io/badge/2016-09%2F25-red" /></a>
+    <a href="https://github.com/andrefpoliveira/AdventOfCode#2021" alt="Year2021">
+        <img src="https://img.shields.io/badge/2021-11%2F11-green" /></a>
+</p>
 My solutions for the Advent Of Code
 
 Some of these solutions need some optimization tho 😄
-
-### Years
-| Year | Solved |
-|:----:|:------:|
-| [2015](https://github.com/andrefpoliveira/AdventOfCode#2015) | 25 |
-| [2016](https://github.com/andrefpoliveira/AdventOfCode#2016) | 8 |
-| [2021](https://github.com/andrefpoliveira/AdventOfCode#2021) | 11 |
 
 ## 2015
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
