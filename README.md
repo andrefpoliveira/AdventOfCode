@@ -57,4 +57,4 @@ Some of these solutions need some optimization tho 😄
 | 8 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day08.py) | 0.000 | 0.003 | 0.003 |
 | 9 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day09.py) | 0.021 | 0.021 | 0.042 |
 | 10 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day10.py) | 0.001 | 0.000 | 0.001 |
-| 11 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day11.py) | 0.09 | 0.028 | 0.037 |
+| 11 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day11.py) | 0.009 | 0.028 | 0.037 |
