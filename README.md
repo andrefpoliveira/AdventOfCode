@@ -1,6 +1,8 @@
 # AdventOfCode
 My solutions for the Advent Of Code
 
+Some of these solutions need some optimization tho 😄
+
 ## 2015
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
 |:---:|:----:|:---------------------:|:---------------------:|:--------------------:|
