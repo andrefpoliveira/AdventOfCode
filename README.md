@@ -1,8 +1,6 @@
 # AdventOfCode
 My solutions for the Advent Of Code
 
-I marked as "Needs Improvement" any problem that took more than 5 seconds (total). This may be not accurate but... 😊
-
 ## 2015
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
 |:---:|:----:|:---------------------:|:---------------------:|:--------------------:|
