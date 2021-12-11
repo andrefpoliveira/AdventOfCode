@@ -4,9 +4,11 @@ My solutions for the Advent Of Code
 Some of these solutions need some optimization tho 😄
 
 ### Years
-[2015](https://github.com/andrefpoliveira/AdventOfCode#2015)  
-[2016](https://github.com/andrefpoliveira/AdventOfCode#2016)  
-[2021](https://github.com/andrefpoliveira/AdventOfCode#2021)  
+| Year | Solved |
+|:----:|:------:|
+| [2015](https://github.com/andrefpoliveira/AdventOfCode#2015) | 25 |
+| [2016](https://github.com/andrefpoliveira/AdventOfCode#2016) | 8 |
+| [2021](https://github.com/andrefpoliveira/AdventOfCode#2021) | 11 |
 
 ## 2015
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
