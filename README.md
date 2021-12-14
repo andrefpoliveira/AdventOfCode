@@ -13,7 +13,7 @@
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2020" alt="Year2020">
         <img src="https://img.shields.io/badge/2020-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2021" alt="Year2021">
-        <img src="https://img.shields.io/badge/2021-13%2F13-green" /></a>
+        <img src="https://img.shields.io/badge/2021-14%2F14-green" /></a>
 </p>
 My solutions for the Advent Of Code
 
@@ -76,3 +76,4 @@ Some of these solutions need some optimization tho 😄
 | 11 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day11.py) | 0.009 | 0.028 | 0.037 |
 | 12 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day12.py) | 0.011 | 3.204 | 3.215 |
 | 13 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day13.py) | 0.003 | - | 0.003 |
+| 14 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day14.py) | - | - | 0.004 |
