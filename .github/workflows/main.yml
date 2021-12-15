@@ -23,4 +23,4 @@ jobs:
           python-version: '3.9.6' # install the python version needed
 
       - name: execute py script # run sj-gobierno.py to get the latest data
-        run: python update_readme.py
+        run: python update_readme.py daily
