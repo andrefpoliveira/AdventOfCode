@@ -106,7 +106,7 @@ class Problem:
             # Print answers
             if (part in ["both"]) and (type(out) is tuple) and (len(out) >= 2):
                 print("Part 1: {}".format(out[0]))
-                print("Part 2: {} (total runtime: {}{})".format(
+                print("Part 2: {} (runtime: {}{})".format(
                     out[1], delta, unit
                 ))
             else:
