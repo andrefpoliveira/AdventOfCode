@@ -1,9 +1,9 @@
-name: CI
+name: Update Readme
 
 # Controls when the workflow will run
 on:
   schedule:
-    - cron: '0 12 * * *' # runs at 12:00 UTC everyday
+    - cron: '0 0 * 12 *' # runs at 12:00 UTC everyday
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
