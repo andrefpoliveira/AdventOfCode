@@ -1,4 +1,4 @@
-import sys, re
+import sys, re, os
 from datetime import date
 
 def daily_update():
@@ -31,7 +31,26 @@ def commit_update(commit_message):
     if match == None: return
 
     numbers = [x for x in match.groups()]
-    print(numbers)
+
+    previous_stdout = sys.stdout
+    with open("res.txt", "w") as out:
+        sys.stdout = out
+        with open(f"events/{numbers[0]}/day{int(numbers[1]):02d}.py") as f:
+            exec(f.read())
+        sys.stdout = previous_stdout
+
+    with open("res.txt") as f:
+        text = f.read()
+        results = re.findall(r"(\d+\.\d+.?s)", text)
+        for id, v in enumerate(results):
+            if v[-2:] == "us":
+                results[id] = "0.000"
+            elif v[-2:] == "ms":
+                results[id] = f"{float(v[:-2])/1000:.3f}"
+            else:
+                results[id] = f"{float(v[:-1]):.3f}"
+
+    os.remove("res.txt")
 
     with open("README.md") as f:
         lines = f.readlines()
@@ -52,7 +71,10 @@ def commit_update(commit_message):
                 found = True
             
             if line.strip() == "" and found:
-                lines.insert(id, f'| {numbers[1]} | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/{numbers[0]}/day{f"{int(numbers[1]):02d}"}.py) | - | - | - |\n')
+                if len(results) == 1:
+                    lines.insert(id, f'| {numbers[1]} | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/{numbers[0]}/day{f"{int(numbers[1]):02d}"}.py) | - | - | {results[0]} |\n')
+                else:
+                    lines.insert(id, f'| {numbers[1]} | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/{numbers[0]}/day{f"{int(numbers[1]):02d}"}.py) | {results[0]} | {results[1]} | {results[2]} |\n')
                 break
 
     with open("README.md", "w") as f:
