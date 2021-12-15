@@ -1,7 +1,7 @@
 # AdventOfCode
 <p align="center">
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2015" alt="Year2015"><img src="https://img.shields.io/badge/2015-25%2F25-green" /></a>
-    <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016"><img src="https://img.shields.io/badge/2016-09%2F25-red" /></a>
+    <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016"><img src="https://img.shields.io/badge/2016-08%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2017" alt="Year2017"><img src="https://img.shields.io/badge/2017-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2018" alt="Year2018"><img src="https://img.shields.io/badge/2018-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2019" alt="Year2019"><img src="https://img.shields.io/badge/2019-00%2F25-red" /></a>
@@ -51,7 +51,7 @@ Some of these solutions need some optimization tho 😄
 | 5 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day05.py) | 11.093 | 42.456 | 53.549 |
 | 6 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day06.py) | 0.001 | 0.001 | 0.002 |
 | 7 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day07.py) | 0.022 | 0.022 | 0.044 |
-| 8 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day08.py) | 0.003 | - | 0.003 |
+| 8 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2016/day08.py) | - | - | 0.003 |
 
 ## 2021
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
@@ -68,6 +68,6 @@ Some of these solutions need some optimization tho 😄
 | 10 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day10.py) | 0.001 | 0.000 | 0.001 |
 | 11 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day11.py) | 0.009 | 0.028 | 0.037 |
 | 12 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day12.py) | 0.011 | 3.204 | 3.215 |
-| 13 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day13.py) | 0.003 | - | 0.003 |
+| 13 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day13.py) | - | - | 0.003 |
 | 14 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day14.py) | - | - | 0.004 |
 | 15 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/2021/day15.py) | - | - | 122.128 |
