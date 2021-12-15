@@ -11,7 +11,7 @@ def part2(grid):
         print(''.join([".", "#"][x] for x in row))
     print()
 
-@problem.solver(part=1)
+@problem.solver()
 def part1(ls):
     grid = [[0 for _ in range(width)] for _ in range(height)]
 
