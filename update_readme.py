@@ -63,6 +63,10 @@ def commit_update(commit_message):
 
         splt = line.split("%2F")
         splt[0] = splt[0][:-2] + f"{int(numbers[1]):02d}"
+
+        if splt[0][-2:] == splt[1][:2]:
+            splt[1] = splt[1].replace("red", "green")
+
         lines[line_id] = '%2F'.join(splt)
 
         found = False
