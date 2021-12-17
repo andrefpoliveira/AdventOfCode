@@ -4,6 +4,12 @@ name: Update Readme
 on:
   schedule:
     - cron: '0 0 * 12 *' # runs at 12:00 UTC everyday
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Manual Update'     
+        required: true
+        default: 'Manual Update'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
