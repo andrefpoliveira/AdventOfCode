@@ -27,10 +27,10 @@ jobs:
 
       - name: commit files
         run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -A
-        git commit -m "daily update" -a
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "daily update" -a
       
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
