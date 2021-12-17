@@ -27,7 +27,7 @@ def daily_update():
                 f.write(line)
 
 def commit_update(commit_message):
-    match = re.match(r"^\[(\d+)\] Day (\d+)$", commit_message)
+    match = re.match(r"^(\d+)-Day-(\d+)$", commit_message)
     if match == None: return
 
     numbers = [x for x in match.groups()]
