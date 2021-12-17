@@ -76,9 +76,9 @@ def commit_update(commit_message):
             
             if line.strip() == "" and found:
                 if len(results) == 1:
-                    lines.insert(id, f'| {numbers[1]} | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/{numbers[0]}/day{f"{int(numbers[1]):02d}"}.py) | - | - | {results[0]} |\n')
+                    lines.insert(id, f'| {numbers[1]} | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/{numbers[0]}/day{f"{int(numbers[1]):02d}"}.py) | - | - | {results[0]} |\n')
                 else:
-                    lines.insert(id, f'| {numbers[1]} | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/{numbers[0]}/day{f"{int(numbers[1]):02d}"}.py) | {results[0]} | {results[1]} | {results[2]} |\n')
+                    lines.insert(id, f'| {numbers[1]} | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/{numbers[0]}/day{f"{int(numbers[1]):02d}"}.py) | {results[0]} | {results[1]} | {results[2]} |\n')
                 break
 
     with open("README.md", "w") as f:
