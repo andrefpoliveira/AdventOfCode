@@ -21,7 +21,7 @@ jobs:
           python-version: '3.9.6' # install the python version needed
 
       - name: execute py script # run sj-gobierno.py to get the latest data
-        run: python update_readme.py commit ${{ github.event.commits[1].message }}
+        run: python update_readme.py commit ${{ github.event.commits[0].message }}
 
       - name: commit files
         run: |
