@@ -1,4 +1,4 @@
-# AdventOfCode
+# Advent Of Code
 <p align="center">
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2015" alt="Year2015"><img src="https://img.shields.io/badge/2015-25%2F25-green" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016"><img src="https://img.shields.io/badge/2016-08%2F25-red" /></a>
