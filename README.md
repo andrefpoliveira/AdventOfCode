@@ -88,3 +88,4 @@ Some of these solutions need some optimization tho 😄
 | 13 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2021/day13.py) | - | - | 0.003 |
 | 14 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2021/day14.py) | - | - | 0.004 |
 | 15 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2021/day15.py) | - | - | 122.128 |
+
