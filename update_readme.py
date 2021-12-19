@@ -36,7 +36,7 @@ def commit_update(commit_message):
     with open("res.txt", "w") as out:
         sys.stdout = out
         with open(f"events/{numbers[0]}/day{int(numbers[1]):02d}.py") as f:
-            exec(f.read())
+            exec(f.read(), globals(), globals())
         sys.stdout = previous_stdout
 
     with open("res.txt") as f:
