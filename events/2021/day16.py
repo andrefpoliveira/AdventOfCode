@@ -45,7 +45,7 @@ def process_packet(s, i):
     return i, tv, rules[id](vals)
 
 @problem.solver()
-def part1(s):
+def solver(s):
     binary = bin(int('1'+s,16))[3:]
     _, part1, part2 = process_packet(binary, 0)
     return part1, part2
