@@ -1,4 +1,4 @@
-# AdventOfCode
+# Advent Of Code
 <p align="center">
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2015" alt="Year2015"><img src="https://img.shields.io/badge/2015-25%2F25-green" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016"><img src="https://img.shields.io/badge/2016-08%2F25-red" /></a>
@@ -6,7 +6,7 @@
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2018" alt="Year2018"><img src="https://img.shields.io/badge/2018-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2019" alt="Year2019"><img src="https://img.shields.io/badge/2019-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2020" alt="Year2020"><img src="https://img.shields.io/badge/2020-00%2F25-red" /></a>
-    <a href="https://github.com/andrefpoliveira/AdventOfCode#2021" alt="Year2021"><img src="https://img.shields.io/badge/2021-15%2F17-red" /></a>
+    <a href="https://github.com/andrefpoliveira/AdventOfCode#2021" alt="Year2021"><img src="https://img.shields.io/badge/2021-15%2F19-red" /></a>
 </p>
 My solutions for the Advent Of Code
 
