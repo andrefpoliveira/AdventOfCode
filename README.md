@@ -52,7 +52,7 @@ Some of these solutions need some optimization tho 😄
 | 6 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day06.py) | 0.001 | 0.001 | 0.002 |
 | 7 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day07.py) | 0.022 | 0.022 | 0.044 |
 | 8 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day08.py) | - | - | 0.003 |
-| 09 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day09.py) | 0.000 | 0.003 | 0.003 |
+| 9 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day09.py) | 0.000 | 0.003 | 0.003 |
 
 ## 2017
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
