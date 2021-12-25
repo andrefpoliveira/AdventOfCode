@@ -5,6 +5,8 @@ def daily_update():
     today = date.today()
     d, m, y = today.strftime("%d/%m/%Y").split("/")
 
+    if int(d) > 25: return
+
     if m == "12":
         with open("README.md") as f:
             lines = f.readlines()
