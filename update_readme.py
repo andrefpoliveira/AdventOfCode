@@ -30,7 +30,7 @@ def daily_update():
 
 def commit_update(commit_message):
     match = re.match(r"^(\d+)-Day-(\d+)$", commit_message)
-    if match == None: return
+    if match == None: raise ValueError("No new problem")
 
     numbers = [x for x in match.groups()]
 

@@ -24,6 +24,7 @@ jobs:
         run: python update_readme.py commit ${{ github.event.commits[0].message }}
 
       - name: commit files
+        if: ${{ success() }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
