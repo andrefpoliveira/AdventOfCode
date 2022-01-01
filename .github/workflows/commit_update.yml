@@ -34,7 +34,7 @@ jobs:
         run: echo "Changed files ${{ steps.changed-files.outputs.changed_files }}"
 
       - name: commit files
-        if: steps.changed_files.outputs.files_changed == 'true'
+        if: contains(steps.changed-files.outputs.changed_files, 'README.md')
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
