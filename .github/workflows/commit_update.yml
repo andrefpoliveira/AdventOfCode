@@ -23,8 +23,15 @@ jobs:
       - name: execute py script # run sj-gobierno.py to get the latest data
         run: python update_readme.py commit ${{ github.event.commits[0].message }}
 
+      - name: Verify Changed files
+        uses: tj-actions/verify-changed-files@v8.8
+        id: changed-files
+        with:
+          files: |
+             README.md
+
       - name: commit files
-        if: ${{ success() }}
+        if: steps.changed_files.outputs.files_changed == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
