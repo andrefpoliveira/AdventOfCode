@@ -8,7 +8,7 @@
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2020" alt="Year2020"><img src="https://img.shields.io/badge/2020-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2021" alt="Year2021"><img src="https://img.shields.io/badge/2021-18%2F25-red" /></a>
 </p>
-My solutions for the Advent Of Code
+My solutions for the Advent Of Code 🎅🏻🎄⛄
 
 Some of these solutions need some optimization tho 😄
 
