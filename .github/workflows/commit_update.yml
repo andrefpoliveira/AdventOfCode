@@ -29,6 +29,9 @@ jobs:
         with:
           files: |
              README.md
+     
+      - name: debug
+        run: echo "Changed files ${{ steps.changed-files.outputs.changed_files }}"
 
       - name: commit files
         if: steps.changed_files.outputs.files_changed == 'true'
