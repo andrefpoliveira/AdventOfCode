@@ -1,14 +1,14 @@
 # Advent Of Code
 <p align="center">
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2015" alt="Year2015"><img src="https://img.shields.io/badge/2015-25%2F25-green" /></a>
-    <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016"><img src="https://img.shields.io/badge/2016-12%2F25-red" /></a>
+    <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016"><img src="https://img.shields.io/badge/2016-13%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2017" alt="Year2017"><img src="https://img.shields.io/badge/2017-01%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2018" alt="Year2018"><img src="https://img.shields.io/badge/2018-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2019" alt="Year2019"><img src="https://img.shields.io/badge/2019-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2020" alt="Year2020"><img src="https://img.shields.io/badge/2020-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2021" alt="Year2021"><img src="https://img.shields.io/badge/2021-18%2F25-red" /></a>
 </p>
-My solutions for the Advent Of Code
+My solutions for the Advent Of Code 🎅🏻🎄⛄
 
 Some of these solutions need some optimization tho 😄
 
@@ -56,6 +56,7 @@ Some of these solutions need some optimization tho 😄
 | 10 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day10.py) | 0.007 | 0.000 | 0.007 |
 | 11 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day11.py) | 0.679 | 3.656 | 4.336 |
 | 12 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day12.py) | 0.576 | 16.277 | 16.853 |
+| 13 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day13.py) | - | - | 0.002 |
 
 ## 2017
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
