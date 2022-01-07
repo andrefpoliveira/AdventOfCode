@@ -1,7 +1,7 @@
 # Advent Of Code
 <p align="center">
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2015" alt="Year2015"><img src="https://img.shields.io/badge/2015-25%2F25-green" /></a>
-    <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016"><img src="https://img.shields.io/badge/2016-20%2F25-red" /></a>
+    <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016"><img src="https://img.shields.io/badge/2016-21%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2017" alt="Year2017"><img src="https://img.shields.io/badge/2017-01%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2018" alt="Year2018"><img src="https://img.shields.io/badge/2018-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2019" alt="Year2019"><img src="https://img.shields.io/badge/2019-00%2F25-red" /></a>
@@ -65,6 +65,7 @@ Some of these solutions need some optimization tho 😄
 | 18 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day18.py) | - | - | 11.024 |
 | 19 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day19.py) | 0.000 | 0.000 | 0.000 |
 | 20 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day20.py) | 0.002 | 0.002 | 0.004 |
+| 21 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2016/day21.py) | 0.000 | 14.310 | 14.310 |
 
 ## 2017
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
