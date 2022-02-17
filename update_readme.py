@@ -45,7 +45,7 @@ def commit_update(commit_message):
         text = f.read()
         results = re.findall(r"(\d+\.\d+.?s)", text)
         for id, v in enumerate(results):
-            if v[-2:] == "us":
+            if v[-2:] in ["us", "ns"]:
                 results[id] = "0.000"
             elif v[-2:] == "ms":
                 results[id] = f"{float(v[:-2])/1000:.3f}"
