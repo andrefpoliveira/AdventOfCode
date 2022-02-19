@@ -11,7 +11,8 @@ def pass_firewall(d, delay = 0):
         size = d[i]
         if (i + delay) % (size + size - 2) == 0:
             sev += i * size
-            escaped = False
+            if delay != 0:
+                return -1, False
     return sev, escaped
 
 @problem.solver(part=1)
