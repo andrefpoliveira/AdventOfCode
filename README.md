@@ -2,7 +2,7 @@
 <p align="center">
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2015" alt="Year2015"><img src="https://img.shields.io/badge/2015-25%2F25-green" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016"><img src="https://img.shields.io/badge/2016-25%2F25-green" /></a>
-    <a href="https://github.com/andrefpoliveira/AdventOfCode#2017" alt="Year2017"><img src="https://img.shields.io/badge/2017-15%2F25-red" /></a>
+    <a href="https://github.com/andrefpoliveira/AdventOfCode#2017" alt="Year2017"><img src="https://img.shields.io/badge/2017-16%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2018" alt="Year2018"><img src="https://img.shields.io/badge/2018-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2019" alt="Year2019"><img src="https://img.shields.io/badge/2019-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2020" alt="Year2020"><img src="https://img.shields.io/badge/2020-00%2F25-red" /></a>
@@ -88,6 +88,7 @@ Some of these solutions need some optimization tho 😄
 | 13 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2017/day13.py) | 0.000 | 8.729 | 8.729 |
 | 14 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2017/day14.py) | - | - | 5.620 |
 | 15 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2017/day15.py) | 31.404 | 14.993 | 46.397 |
+| 16 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2017/day16.py) | 0.010 | 1.105 | 1.115 |
 
 ## 2018
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
