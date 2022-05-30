@@ -35,7 +35,7 @@ def hex_to_bin(s):
     return bin(int(s, 16))[2:].zfill(128)
 
 @problem.solver()
-def part1(s):
+def solver(s):
     part2 = 0
     unseen = []
     for i in range(128):
