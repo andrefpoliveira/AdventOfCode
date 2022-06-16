@@ -10,7 +10,7 @@ def part1(vs):
     return sum(vs)
 
 @problem.solver(part=2)
-def part1(vs):
+def part2(vs):
     seen = {0}
     for v in accumulate(cycle(vs)):
         if v in seen: return v
