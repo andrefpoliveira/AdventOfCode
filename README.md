@@ -3,7 +3,7 @@
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2015" alt="Year2015"><img src="https://img.shields.io/badge/2015-25%2F25-green" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2016" alt="Year2016"><img src="https://img.shields.io/badge/2016-25%2F25-green" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2017" alt="Year2017"><img src="https://img.shields.io/badge/2017-25%2F25-green" /></a>
-    <a href="https://github.com/andrefpoliveira/AdventOfCode#2018" alt="Year2018"><img src="https://img.shields.io/badge/2018-02%2F25-red" /></a>
+    <a href="https://github.com/andrefpoliveira/AdventOfCode#2018" alt="Year2018"><img src="https://img.shields.io/badge/2018-03%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2019" alt="Year2019"><img src="https://img.shields.io/badge/2019-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2020" alt="Year2020"><img src="https://img.shields.io/badge/2020-00%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2021" alt="Year2021"><img src="https://img.shields.io/badge/2021-18%2F25-red" /></a>
@@ -104,6 +104,7 @@ Some of these solutions need some optimization tho 😄
 |:---:|:----:|:---------------------:|:---------------------:|:--------------------:|
 | 01 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2018/day01.py) | 0.000 | 0.031 | 0.031 |
 | 02 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2018/day02.py) | 0.002 | 0.112 | 0.115 |
+| 03 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2018/day03.py) | - | - | 0.836 |
 
 ## 2019
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
