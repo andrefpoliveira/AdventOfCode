@@ -1,0 +1,51 @@
+name: Update Readme (Commit)
+
+# Controls when the workflow will run
+on: push
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      
+      - name: setup python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10.8' # install the python version needed
+
+      - name: install dependencies
+        run: pip install -r requirements.txt
+
+      - name: execute py script # run sj-gobierno.py to get the latest data
+        run: python update_readme.py commit ${{ github.event.commits[0].message }}
+
+      - name: Verify Changed files
+        uses: tj-actions/verify-changed-files@v8.8
+        id: changed-files
+        with:
+          files: |
+             README.md
+     
+      - name: debug
+        run: echo "Changed files ${{ steps.changed-files.outputs.changed_files }}"
+
+      - name: commit files
+        if: contains(steps.changed-files.outputs.changed_files, 'README.md')
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "commit update ${{ github.event.commits[0].message }}" -a
+      
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main 
