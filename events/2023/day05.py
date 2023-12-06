@@ -45,7 +45,6 @@ def loc_to_seed(loc, maps, seeds):
             return True
     return False
         
-
 @problem.solver(part=2)
 def part2(ls):
     seeds = tuple(map(int, re.findall(r"\d+", ls[0])))
