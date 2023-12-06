@@ -9,6 +9,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    env:
+      AOC_SESSION: ${{ secrets.AOC_SESSION }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -24,8 +26,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: execute py script # run sj-gobierno.py to get the latest data
-        env:
-          AOC_SESSION: ${{ secrets.AOC_SESSION }}
         run: python update_readme.py commit ${{ github.event.commits[0].message }}
 
       - name: Verify Changed files
