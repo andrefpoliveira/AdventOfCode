@@ -24,6 +24,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: execute py script # run sj-gobierno.py to get the latest data
+        env:
+          AOC_SESSION: ${{ secrets.AOC_SESSION }}
         run: python update_readme.py commit ${{ github.event.commits[0].message }}
 
       - name: Verify Changed files
