@@ -8,7 +8,7 @@
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2020" alt="Year2020"><img src="https://img.shields.io/badge/2020-10%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2021" alt="Year2021"><img src="https://img.shields.io/badge/2021-18%2F25-red" /></a>
     <a href="https://github.com/andrefpoliveira/AdventOfCode#2022" alt="Year2022"><img src="https://img.shields.io/badge/2022-18%2F25-red" /></a>
-    <a href="https://github.com/andrefpoliveira/AdventOfCode#2023" alt="Year2023"><img src="https://img.shields.io/badge/2023-10%2F11-red" /></a>
+    <a href="https://github.com/andrefpoliveira/AdventOfCode#2023" alt="Year2023"><img src="https://img.shields.io/badge/2023-11%2F12-red" /></a>
 </p>
 My solutions for the Advent Of Code 🎅🏻🎄⛄
 
@@ -197,3 +197,4 @@ Some of these solutions need some optimization tho 😄
 | 08 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2023/day08.py) | 0.004 | 0.046 | 0.050 |
 | 09 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2023/day09.py) | - | - | 0.004 |
 | 10 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2023/day10.py) | - | - | 5.715 |
+| 11 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2023/day11.py) | 0.093 | 0.091 | 0.185 |
