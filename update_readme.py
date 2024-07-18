@@ -88,6 +88,10 @@ if __name__ == "__main__":
 		print(f"Commit {commit_message}")
 		res = commit_update(commit_message)
 
+		if res is None:
+			print("Not a day commit :) nothing to do")
+			exit(0)
+
 		day, year = commit_message.split("-")
 		year_results = results.get(year, {})
 		year_results[day] = res
