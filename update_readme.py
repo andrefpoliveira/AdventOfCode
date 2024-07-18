@@ -40,6 +40,8 @@ def commit_update(commit_message) -> list:
 			else:
 				results[id] = f"{float(v[:-1]):.3f}"
 
+	os.remove("res.txt")
+
 	return results
 
 
