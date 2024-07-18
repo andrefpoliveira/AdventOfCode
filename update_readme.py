@@ -77,23 +77,21 @@ def build_report(results):
 if __name__ == "__main__":
 	results = load_results()
 
-	# task = sys.argv[1]
+	task = sys.argv[1]
 
-	# if task == "daily":
-	# 	print("Daily update!")
-	# 	build_report(results)
+	if task == "daily":
+		print("Daily update!")
+		build_report(results)
 		
-	# elif task == "commit":
-	# 	commit_message = sys.argv[2]
-	# 	print(f"Commit {commit_message}")
-	# 	res = commit_update(commit_message)
+	elif task == "commit":
+		commit_message = sys.argv[2]
+		print(f"Commit {commit_message}")
+		res = commit_update(commit_message)
 
-	# 	day, year = commit_message.split("-")
-	# 	year_results = results.get(year, {})
-	# 	year_results[day] = res
-	# 	results[year] = year_results
+		day, year = commit_message.split("-")
+		year_results = results.get(year, {})
+		year_results[day] = res
+		results[year] = year_results
 
-	# 	save_results(results)
-	# 	build_report(results)
-
-	build_report(results)
+		save_results(results)
+		build_report(results)
