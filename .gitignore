@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 inputs/
+res.txt
 
 __pycache__/
 *.py[cod]
