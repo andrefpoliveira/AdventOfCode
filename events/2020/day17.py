@@ -3,8 +3,6 @@ from utils import preprocessing as ppr
 
 from itertools import product
 
-import re
-
 problem = problem.Problem("2020/17: Conway Cubes")
 problem.preprocessor = ppr.grid
 
