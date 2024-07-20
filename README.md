@@ -10,7 +10,7 @@
 				<img src="https://img.shields.io/badge/2017-25%2F25-green" />
 			</a>
 <a href="https://github.com/andrefpoliveira/AdventOfCode#2018" alt="Year2018">
-				<img src="https://img.shields.io/badge/2018-14%2F25-red" />
+				<img src="https://img.shields.io/badge/2018-15%2F25-red" />
 			</a>
 <a href="https://github.com/andrefpoliveira/AdventOfCode#2019" alt="Year2019">
 				<img src="https://img.shields.io/badge/2019-04%2F25-red" />
@@ -133,6 +133,7 @@ Some of these solutions need some optimization tho 😄
 | 12 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2018/day12.py) | - | - | 0.007 |
 | 13 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2018/day13.py) | 0.036 | 0.400 | 0.436 |
 | 14 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2018/day14.py) | - | - | 30.025 |
+| 16 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2018/day16.py) | 0.008 | 0.010 | 0.019 |
 ## 2019
 | Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
 |:---:|:----:|:---------------------:|:---------------------:|:--------------------:|
