@@ -27,6 +27,9 @@
 <a href="https://github.com/andrefpoliveira/AdventOfCode#2023" alt="Year2023">
 				<img src="https://img.shields.io/badge/2023-18%2F25-red" />
 			</a>
+<a href="https://github.com/andrefpoliveira/AdventOfCode#2024" alt="Year2024">
+				<img src="https://img.shields.io/badge/2024-00%2F1-red" />
+			</a>
 </p>
 My solutions for the Advent Of Code 🎅🏻🎄⛄
 
@@ -229,3 +232,6 @@ Some of these solutions need some optimization tho 😄
 | 16 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2023/day16.py) | 0.012 | 2.761 | 2.772 |
 | 17 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2023/day17.py) | 1.424 | 4.979 | 2.772 |
 | 18 | [Solution](https://github.com/andrefpoliveira/AdventOfCode/blob/main/events/2023/day18.py) | 0.014 | 0.005 | 0.019 |
+## 2024
+| Day | Link | Part 1 Solve Time (s) | Part 2 Solve Time (s) | Total Solve Time (s) |
+|:---:|:----:|:---------------------:|:---------------------:|:--------------------:|
