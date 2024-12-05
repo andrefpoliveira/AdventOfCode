@@ -56,7 +56,7 @@ def build_report(results):
 			status = "green" if solved_days == days else "red"
 
 			f.write(f'''<a href="https://github.com/andrefpoliveira/AdventOfCode#{year}" alt="Year{year}">
-				<img src="https://img.shields.io/badge/{year}-{solved_days:02d}%2F{days}-{status}" />
+				<img src="https://img.shields.io/badge/{year}-{solved_days:02d}%2F{days:02d}-{status}" />
 			</a>\n'''
 			)
 
