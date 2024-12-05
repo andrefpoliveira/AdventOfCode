@@ -25,12 +25,12 @@ def is_report_safe(report, part2 = False):
 
 
 @problem.solver(part=1)
-def solver(grid):
+def part1(grid):
     return sum(is_report_safe(report) for report in grid)
 
 
 @problem.solver(part=2)
-def solver(grid):
+def part2(grid):
     return sum(is_report_safe(report, part2=True) for report in grid)
 
 

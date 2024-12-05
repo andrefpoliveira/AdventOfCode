@@ -22,13 +22,13 @@ def get_lists(ls):
 
 
 @problem.solver(part=1)
-def solver(ls):
+def part1(ls):
     l1, l2 = get_lists(ls)
     return sum(abs(l1[i] - l2[i]) for i in range(len(l1)))
 
 
 @problem.solver(part=2)
-def solver(ls):
+def part2(ls):
     l1, l2 = get_lists(ls)
 
     c1, c2 = Counter(l1), Counter(l2)
