@@ -52,6 +52,10 @@ def build_report(results):
 		for year in range(2015, date.today().year + (1 if date.today().month == 12 else 0)):
 
 			days = 25 if year != date.today().year else date.today().day
+
+			if year >= 2025:
+				days = min(days, 12)
+
 			solved_days = len(results.get(str(year), []))
 			status = "green" if solved_days == days else "red"
 

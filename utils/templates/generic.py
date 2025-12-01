@@ -10,7 +10,7 @@ def solve(inp):
     for v in inp:
         print(v)
 
-    return (0, 0)
+    return (p1, p2)
 
 if __name__ == "__main__":
     problem.solve()
