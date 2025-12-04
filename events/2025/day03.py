@@ -31,8 +31,6 @@ def find_joltage(l, count = 2):
 
         update_pointer(l, pointers, count)
 
-        # print(pointers)
-
     return joltage
 
 @problem.solver()
