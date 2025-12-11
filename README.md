@@ -31,7 +31,7 @@
 				<img src="https://img.shields.io/badge/2024-05%2F25-red" />
 			</a>
 <a href="https://github.com/andrefpoliveira/AdventOfCode#2025" alt="Year2025">
-				<img src="https://img.shields.io/badge/2025-09%2F10-red" />
+				<img src="https://img.shields.io/badge/2025-09%2F11-red" />
 			</a>
 </p>
 My solutions for the Advent Of Code 🎅🏻🎄⛄
