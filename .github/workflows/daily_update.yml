@@ -36,10 +36,11 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git commit -m "daily update" -a
+          git diff --quiet && git diff --staged --quiet || git commit -m "daily update"
       
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main 
+          branch: main
+        continue-on-error: true 
